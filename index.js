@@ -4,11 +4,14 @@
 // https://ayumilovemaple.wordpress.com/2008/09/24/validation-singapore-nric-number-verification/
 
 const express = require('express');
+const helmet = require('helmet');
+
 const app = express();
 const PORT = 3000 || process.env.PORT;
 
 const validator = require('./nric-validator');
 
+app.use(helmet());
 app.get('/', (req, res) => res.send('hello world'));
 
 app.get('/check-nric/:nric', (req, res) => {
