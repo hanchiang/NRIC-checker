@@ -12,6 +12,7 @@ const PORT = 3000 || process.env.PORT;
 const validator = require('./nric-validator');
 
 app.use(helmet());
+app.get('/favicon.ico', (req, res) => res.status(204).end());
 app.get('/', (req, res) => res.send('hello world'));
 
 app.get('/check-nric/:nric', (req, res) => {
