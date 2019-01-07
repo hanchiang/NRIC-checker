@@ -91,7 +91,7 @@ function validateNRIC(nric) {
   const inputChecksum = nric[nric.length - 1].toUpperCase();
   if (!isAlpha(prefix) || !isAlpha(inputChecksum)) return false;
 
-  checksumPrefix = validatePrefix(prefix);
+  const checksumPrefix = validatePrefix(prefix);
   if (!checksumPrefix) return false;
 
   if (validateChecksum(checksumPrefix, inputChecksum)) return false;
