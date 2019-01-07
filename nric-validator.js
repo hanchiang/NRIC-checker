@@ -85,7 +85,6 @@ function calculateCheckDigit(digits, prefix) {
  *
  */
 function validateNRIC(nric) {
-  if (typeof nric !== 'string') return false;
   if (nric.length !== NRIC.LENGTH) return false;
 
   const prefix = nric[0].toUpperCase();
