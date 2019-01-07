@@ -7,6 +7,7 @@
     "node": "10.x"
   },
   "scripts": {
+    "preinstall": "npm i -g pm2",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "start": "pm2 start index.js"
